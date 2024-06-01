@@ -7,9 +7,8 @@ import Head from 'next/head';
 import { useSession } from 'next-auth/react';
 
 export const metadata = {
-  title: 'Librelinks',
-  description:
-    'Librelinks is an opensource link in bio tool that helps you easily manage your links, transforming your online presence.',
+  title: 'LawnLinkPro',
+  description: 'LawnLinkPro simplifies establishing an online presence for lawn care businesses, helping you easily manage your links and reach your customers effectively.',
 };
 
 const Home = () => {
@@ -19,139 +18,88 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Librelinks | A free & opensource link in bio tool</title>
+        <title>LawnLinkPro | Simplifying Your Lawn Care Business Online Presence</title>
         {/* <!-- Open Graph (OG) meta tags --> */}
-        <meta property="og:url" content="https://librelinks.vercel.app/" />
-        <meta property="og:url" content="https://librelinks.me/" />
-        <meta property="og:url" content="https://www.librelinks.me/" />
+        <meta property="og:url" content="https://lawnlinkpro.com/" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:site_name"
-          content="Librelinks - The free & opensource link in bio tool"
-        />
-        <meta property="og:title" content="Librelinks" />
+        <meta property="og:site_name" content="LawnLinkPro - The easiest way to reach your lawn care customers." />
+        <meta property="og:title" content="LawnLinkPro" />
         <meta
           property="og:description"
-          content="Librelinks is an opensource link in bio tool that helps you easily manage your links, transforming your online presence."
+          content="LawnLinkPro simplifies establishing an online presence for lawn care businesses, helping you easily manage your links and reach your customers effectively."
         />
         <meta
           property="og:image"
           itemprop="image"
-          content="https://librelinks.vercel.app/og.png"
-        />
-        <meta
-          property="og:image"
-          itemprop="image"
-          content="https://librelinks.me/og.png"
-        />
-        <meta
-          property="og:image"
-          itemprop="image"
-          content="https://www.librelinks.me/og.png"
+          content="https://lawnlinkpro.com/og.png"
         />
 
         {/* <!-- Twitter Card meta tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@urdadx" />
-        <meta name="twitter:creator" content="@urdadx" />
+        <meta name="twitter:site" content="@calebforestal" />
+        <meta name="twitter:creator" content="@calebforestal" />
         <meta
           property="twitter:domain"
-          content="https://librelinks.vercel.app/"
+          content="https://lawnlinkpro.com/"
         />
-        <meta property="twitter:domain" content="https://librelinks.me/" />
-        <meta property="twitter:domain" content="https://www.librelinks.me/" />
-        <meta property="twitter:url" content="https://librelinks.vercel.app/" />
-        <meta name="twitter:title" content="Librelinks" />
+        <meta property="twitter:url" content="https://lawnlinkpro.com/" />
+        <meta name="twitter:title" content="LawnLinkPro" />
         <meta
           name="twitter:description"
-          content="Librelinks is an opensource link in bio tool that helps you easily manage your links, transforming your online presence."
+          content="LawnLinkPro simplifies establishing an online presence for lawn care businesses, helping you easily manage your links and reach your customers effectively."
         />
         <meta
           name="twitter:image"
-          content="https://librelinks.vercel.app/og.png"
+          content="https://lawnlinkpro.com/og.png"
         />
-        <meta name="twitter:image" content="https://librelinks.me/og.png" />
-        <meta name="twitter:image" content="https://www.librelinks.me/og.png" />
         <meta
           data-rh="true"
           name="twitter:image:alt"
-          content="Librelinks is an opensource link in bio tool that helps you easily manage your links, transforming your online presence."
+          content="LawnLinkPro simplifies establishing an online presence for lawn care businesses, helping you easily manage your links and reach your customers effectively."
         />
 
         {/* <!-- LinkedIn meta tags --> */}
         <meta
           property="og:linkedin:image"
-          content="https://librelinks.vercel.app/og.png"
+          content="https://lawnlinkpro.com/og.png"
         />
-        <meta
-          property="og:linkedin:image"
-          content="https://librelinks.me/og.png"
-        />
-        <meta
-          property="og:linkedin:image"
-          content="https://www.librelinks.me/og.png"
-        />
-        <meta property="og:linkedin:title" content="Librelinks" />
+        <meta property="og:linkedin:title" content="LawnLinkPro" />
         <meta
           property="og:linkedin:description"
-          content="Librelinks is an opensource link in bio tool that helps you easily manage your links, transforming your online presence."
+          content="LawnLinkPro simplifies establishing an online presence for lawn care businesses, helping you easily manage your links and reach your customers effectively."
         />
 
         {/* <!-- Facebook meta tags --> */}
         <meta
           property="og:facebook:image"
-          content="https://librelinks.vercel.app/og.png"
+          content="https://lawnlinkpro.com/og.png"
         />
-        <meta
-          property="og:facebook:image"
-          content="https://librelinks.me/og.png"
-        />
-        <meta
-          property="og:facebook:image"
-          content="https://www.librelinks.me/og.png"
-        />
-        <meta property="og:facebook:title" content="Librelinks" />
+        <meta property="og:facebook:title" content="LawnLinkPro" />
         <meta
           property="og:facebook:description"
-          content="Librelinks is an opensource link in bio tool that helps you easily manage your links, transforming your online presence."
+          content="LawnLinkPro simplifies establishing an online presence for lawn care businesses, helping you easily manage your links and reach your customers effectively."
         />
 
         {/* <!-- Instagram meta tags --> */}
         <meta
           property="og:instagram:image"
-          content="https://librelinks.vercel.app/og.png"
+          content="https://lawnlinkpro.com/og.png"
         />
-        <meta
-          property="og:instagram:image"
-          content="https://librelinks.me/og.png"
-        />
-        <meta
-          property="og:instagram:image"
-          content="https://www.librelinks.me/og.png"
-        />
-        <meta property="og:instagram:title" content="Librelinks" />
+        <meta property="og:instagram:title" content="LawnLinkPro" />
         <meta
           property="og:instagram:description"
-          content="Librelinks is an opensource link in bio tool that helps you easily manage your links, transforming your online presence."
+          content="LawnLinkPro simplifies establishing an online presence for lawn care businesses, helping you easily manage your links and reach your customers effectively."
         />
 
         {/* <!-- Pinterest meta tags --> */}
         <meta
           property="og:pinterest:image"
-          content="https://librelinks.vercel.app/og.png"
+          content="https://lawnlinkpro.com/og.png"
         />
-        <meta
-          property="og:pinterest:image"
-          content="https://librelinks.me/og.png"
-        />
-        <meta
-          property="og:pinterest:image"
-          content="https://www.librelinks.me/og.png"
-        />
-        <meta property="og:pinterest:title" content="Librelinks" />
+        <meta property="og:pinterest:title" content="LawnLinkPro" />
         <meta
           property="og:pinterest:description"
-          content="Librelinks is an opensource link in bio tool that helps you easily manage your links, transforming your online presence."
+          content="LawnLinkPro simplifies establishing an online presence for lawn care businesses, helping you easily manage your links and reach your customers effectively."
         />
       </Head>
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
@@ -170,7 +118,7 @@ const Home = () => {
                   className="flex items-center gap-2 font-bold text-xl"
                   href="/"
                 >
-                  <h3 className="lg:block">Librelinks</h3>
+                  <h3 className="lg:block">LawnLinkPro</h3>
                 </Link>
 
                 <div className="relative items-center w-28 z-10 md:absolute md:inset-y-0 md:right-0">
@@ -185,27 +133,26 @@ const Home = () => {
               </nav>
             </div>
             <div className="px-4 mx-auto mt-24 max-w-7xl sm:mt-16 sm:px-6">
-              <div className="flex justify-center items-center mb-6">
+              {/* <div className="flex justify-center items-center mb-6">
                 <a
                   className="group inline-flex items-center gap-2 px-4 py-4 text-sm bg-gray-50 border rounded-3xl text-gray-500 w-[180px] h-[35px] justify-center transition-colors hover:bg-gray-100"
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://github.com/urdadx/librelinks"
+                  href="https://github.com/urdadx/lawnlinkpro"
                 >
                   <div className="">
                     <GithubStar />
                   </div>{' '}
                   Star us on Github
                 </a>
-              </div>
+              </div> */}
               <div className="text-center">
                 <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-                  <span className="block">The free & opensource</span>
-                  <span className="hero-title block ">link in bio tool</span>
+                  <span className="block">Simplifying Your</span>
+                  <span className="hero-title block">Lawn Care Business Online Presence</span>
                 </h1>
                 <p className="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                  Librelinks is an opensource link in bio tool that helps you
-                  easily manage your links, transforming your online presence.
+                  LawnLinkPro simplifies establishing an online presence for lawn care businesses, helping you easily manage your links and reach your customers effectively.
                 </p>
               </div>
               <div className="flex justify-center mt-6">
@@ -237,7 +184,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="bg-slate-900">
+        {/* <div className="bg-slate-900">
           <div className="px-4 py-16 mx-auto max-w-7xl sm:py-24 sm:px-6 lg:px-8">
             <h2 className="text-lg font-semibold tracking-wide text-center text-gray-400">
               Made by{' '}
@@ -251,8 +198,7 @@ const Home = () => {
               </a>
             </h2>
             <div className="flex items-center gap-4 justify-center mt-4">
-              <a
-                href="https://x.com/NerdyProgramme2"
+              <a href="https://x.com/NerdyProgramme2"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="twitter logo"
@@ -277,7 +223,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

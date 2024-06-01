@@ -92,7 +92,7 @@ const ProfilePage = () => {
   return (
     <>
       <Head>
-        <title> @{handle} | Librelinks</title>
+        <title> @{handle} | LawnLinkPro</title>
       </Head>
       {!query.isIframe ? (
         <Script
@@ -200,9 +200,9 @@ const ProfilePage = () => {
               <Link
                 className="font-semibold"
                 target="_blank"
-                href="https://librelinks.vercel.app/"
+                href="https://lawnlinkpro.com/"
               >
-                Librelinks
+                LawnLinkPro
               </Link>
             </p>
           </footer>
