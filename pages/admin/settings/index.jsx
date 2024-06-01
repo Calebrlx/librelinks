@@ -100,7 +100,7 @@ const Settings = () => {
     await toast.promise(deleteMutation.mutateAsync(), {
       loading: 'Deleting your account',
       success: 'So long partner 🫡',
-      error: 'An error occured',
+      error: 'An error occurred',
     });
     await signOut();
   };
@@ -110,6 +110,18 @@ const Settings = () => {
     title: 'Are you absolutely sure?',
     desc: 'This action cannot be undone. This will permanently delete your account and remove your data from our servers.',
     confirmMsg: 'Yes, delete account',
+  };
+
+  // handle billing portal redirection
+  const handleBillingPortal = async () => {
+    try {
+      const { data } = await axios.post('/api/create-billing-portal-session', {
+        customer_id: currentUser?.stripeCustomerId,
+      });
+      window.location.href = data.url;
+    } catch (error) {
+      toast.error('Failed to redirect to billing portal');
+    }
   };
 
   return (
@@ -176,6 +188,16 @@ const Settings = () => {
           </div>
 
           <div className="max-w-[690px] mx-auto my-10">
+            <h3 className="text-xl font-semibold mb-1">Billing Management</h3>
+            <div className="w-full h-auto border bg-white rounded-lg p-6 mb-4">
+              <button
+                onClick={handleBillingPortal}
+                className="w-full lg:w-[200px] h-[45px] border border-[#000] 
+                outline-none font-semibold text-white bg-green-600 p-2 rounded-3xl hover:bg-green-500"
+              >
+                Manage Billing
+              </button>
+            </div>
             <h3 className="text-xl font-semibold mb-1">Danger Zone</h3>
             <h3 className="mb-4 text-gray-600 text-sm">
               <Balancer>
@@ -188,7 +210,7 @@ const Settings = () => {
                 <AlertDialog.Trigger asChild>
                   <button
                     className="border-none w-full lg:w-[200px] rounded-lg h-auto p-3
-									  text-white bg-red-600 hover:bg-red-500"
+                    text-white bg-red-600 hover:bg-red-500"
                   >
                     Delete Account
                   </button>
@@ -196,7 +218,7 @@ const Settings = () => {
                 <CustomAlert {...deleteAlertProps} />
               </AlertDialog.Root>
             </div>
-          </div>
+            </div>
           {isMobile ? (
             <div className="h-[100px] mb-24" />
           ) : (

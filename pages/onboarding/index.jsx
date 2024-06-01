@@ -30,7 +30,7 @@ const Onboarding = () => {
           setIsExploding(true);
           toast.success(`${handle} is yours 🎉`);
           setTimeout(() => {
-            router.push('/admin');
+            router.push('/billing'); // Redirect to billing page after successful handle claim
           }, 1500);
         }
       } catch (error) {
@@ -63,11 +63,12 @@ const Onboarding = () => {
     setHandle(value);
     setHandleTaken(false);
   };
+
   return (
     <>
       <div
         className="absolute inset-0 bg-[url(../public/grid.svg)] bg-center 
-       			[mask-image:linear-gradient(180deg,rgba(255,255,255,0))] bg-repeat"
+            [mask-image:linear-gradient(180deg,rgba(255,255,255,0))] bg-repeat"
       />
       <div className="absolute w-full flex min-h-full flex-1 flex-col justify-center px-6 py-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
