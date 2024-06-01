@@ -5,7 +5,7 @@ export const config = {
   runtime: 'edge',
 };
 
-export default async function handler() {
+export default function handler() {
   return new ImageResponse(
     (
       <div
@@ -34,7 +34,7 @@ export default async function handler() {
               width: 24,
               height: 24,
               background: 'black',
-              borderRadius: 1000,
+              borderRadius: '50%',
             }}
           />
           <span
@@ -43,7 +43,7 @@ export default async function handler() {
               fontSize: 20,
             }}
           >
-            Librelinks
+            Lawn Link Pro
           </span>
         </div>
         <div
@@ -61,7 +61,7 @@ export default async function handler() {
             lineHeight: 1.4,
           }}
         >
-          <span>A free & opensource link in bio tool 🚀</span>
+          <span>Simplifying Your Lawn Care Business Online Presence</span>
         </div>
       </div>
     ),
