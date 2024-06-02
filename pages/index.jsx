@@ -120,8 +120,16 @@ const Home = () => {
                 >
                   <h3 className="lg:block">LawnLinkPro</h3>
                 </Link>
-
                 <div className="relative items-center w-28 z-10 md:absolute md:inset-y-0 md:right-0">
+                  <a
+                    className="group inline-flex items-center gap-2 px-4 text-sm bg-slate-900 border rounded-3xl text-white w-[116px] h-[35px] justify-center font-semibold transition-colors hover:bg-slate-700"
+                    rel="noopener noreferrer"
+                    href="mailto:sales@lawnlinkpro.com"
+                  >
+                    Contact Sales
+                  </a>
+                </div>
+                {/* <div className="relative items-center w-28 z-10 md:absolute md:inset-y-0 md:right-0">
                   <Link
                     className="group inline-flex items-center gap-2 px-4 text-sm  bg-slate-900 border rounded-3xl text-white w-[116px] h-[35px] justify-center font-semibold transition-colors hover:bg-slate-700"
                     rel="noopener noreferrer"
@@ -129,7 +137,7 @@ const Home = () => {
                   >
                     {isAuthenticated ? 'Admin' : 'Login'}
                   </Link>
-                </div>
+                </div> */}
               </nav>
             </div>
             <div className="px-4 mx-auto mt-24 max-w-7xl sm:mt-16 sm:px-6">
@@ -158,7 +166,7 @@ const Home = () => {
               <div className="flex justify-center mt-6">
                 <div className="flex flex-col items-center">
                   <span className="inline-flex rounded-xl shadow">
-                    <Link legacyBehavior href="/register">
+                    <Link legacyBehavior href="mailto:sales@lawnlinkpro.com">
                       <a className="inline-flex items-center px-4 py-2 font-medium text-lg gradient-btn border border-transparent rounded-xl text-white w-[190px] h-[50px] justify-center hover:shadow-lg">
                         Get started
                       </a>
