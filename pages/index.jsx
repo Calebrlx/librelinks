@@ -124,7 +124,7 @@ const Home = () => {
                   <a
                     className="group inline-flex items-center gap-2 px-4 text-sm bg-slate-900 border rounded-3xl text-white w-[116px] h-[35px] justify-center font-semibold transition-colors hover:bg-slate-700"
                     rel="noopener noreferrer"
-                    href="mailto:sales@lawnlinkpro.com"
+                    href="mailto:caleb@alyeska.dev"
                   >
                     Contact Sales
                   </a>
@@ -166,7 +166,7 @@ const Home = () => {
               <div className="flex justify-center mt-6">
                 <div className="flex flex-col items-center">
                   <span className="inline-flex rounded-xl shadow">
-                    <Link legacyBehavior href="mailto:sales@lawnlinkpro.com">
+                    <Link legacyBehavior href="mailto:caleb@alyeska.dev">
                       <a className="inline-flex items-center px-4 py-2 font-medium text-lg gradient-btn border border-transparent rounded-xl text-white w-[190px] h-[50px] justify-center hover:shadow-lg">
                         Get started
                       </a>
