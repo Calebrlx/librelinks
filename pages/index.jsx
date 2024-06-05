@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import GithubStar from '@/components/utils/github-star';
-import { GithubIcon, GlobeIcon, TwitterIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -132,19 +130,6 @@ const Home = () => {
               </nav>
             </div>
             <div className="px-4 mx-auto mt-24 max-w-7xl sm:mt-16 sm:px-6">
-              {/* <div className="flex justify-center items-center mb-6">
-                <a
-                  className="group inline-flex items-center gap-2 px-4 py-4 text-sm bg-gray-50 border rounded-3xl text-gray-500 w-[180px] h-[35px] justify-center transition-colors hover:bg-gray-100"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://github.com/urdadx/lawnlinkpro"
-                >
-                  <div className="">
-                    <GithubStar />
-                  </div>{' '}
-                  Star us on Github
-                </a>
-              </div> */}
               <div className="text-center">
                 <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
                   <span className="block">Simplifying Your</span>
