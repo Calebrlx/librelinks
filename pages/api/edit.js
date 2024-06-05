@@ -1,6 +1,5 @@
 import { db } from '@/lib/db';
 import serverAuth from '@/lib/serverAuth';
-import stripe from '@/lib/stripe';
 
 export default async function handler(req, res) {
   if (req.method !== 'PATCH' && req.method !== 'DELETE') {
@@ -40,24 +39,17 @@ export default async function handler(req, res) {
 
         return res.status(200).json(updatedUser);
       } catch (error) {
-        return res.status(500).json({ error: `Could not update handle at this time. ${error.message}` });
+        return new Response(`Could not update handle at this time. ${error}`, {
+          status: 500,
+        });
       }
     } else if (req.method === 'DELETE') {
-      try {
-        // Deleting the Stripe customer if exists
-        if (currentUser.stripeCustomerId) {
-          await stripe.customers.del(currentUser.stripeCustomerId);
-        }
-
-        await db.user.delete({
-          where: {
-            id: currentUser.id,
-          },
-        });
-        return res.status(204).end();
-      } catch (error) {
-        return res.status(500).json({ error: `Could not delete user at this time. ${error.message}` });
-      }
+      await db.user.delete({
+        where: {
+          id: currentUser.id,
+        },
+      });
+      return res.status(204).end();
     }
   } catch (error) {
     console.log(error);
